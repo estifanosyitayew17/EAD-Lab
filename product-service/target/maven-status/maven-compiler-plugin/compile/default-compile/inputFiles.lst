@@ -1,1 +1,6 @@
 /home/EAD-lab/product-service/src/main/java/com/ctbe/estifanos/ProductServiceApplication.java
+/home/EAD-lab/product-service/src/main/java/com/ctbe/estifanos/controller/HealthController.java
+/home/EAD-lab/product-service/src/main/java/com/ctbe/estifanos/controller/ProductController.java
+/home/EAD-lab/product-service/src/main/java/com/ctbe/estifanos/model/Product.java
+/home/EAD-lab/product-service/src/main/java/com/ctbe/estifanos/repository/ProductRepository.java
+/home/EAD-lab/product-service/src/main/java/com/ctbe/estifanos/service/ProductService.java

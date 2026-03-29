@@ -1,13 +1,48 @@
 package com.ctbe.estifanos;
 
+import com.ctbe.estifanos.model.Product;
+import com.ctbe.estifanos.repository.ProductRepository;
+import com.ctbe.estifanos.service.ProductService;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import java.util.Optional;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.when;
 
-@SpringBootTest
-class ProductServiceApplicationTests {
+@ExtendWith(MockitoExtension.class)
+class ProductServiceTest {
 
-	@Test
-	void contextLoads() {
-	}
+    @Mock
+    private ProductRepository productRepository;
 
+    @InjectMocks
+    private ProductService productService;
+
+    @Test
+    void findByIdReturnsProductWhenProductExists() {
+        // Arrange
+        Product laptop = new Product("Laptop", 1200.0);
+        laptop.setId(1L);
+        when(productRepository.findById(1L)).thenReturn(Optional.of(laptop));
+
+        // Act
+        Optional<Product> result = productService.findById(1L);
+
+        // Assert
+        assertThat(result).isPresent();
+        assertThat(result.get().getName()).isEqualTo("Laptop");
+        assertThat(result.get().getPrice()).isEqualTo(1200.0);
+    }
+
+    @Test
+    void findByIdReturnsEmptyWhenProductNotFound() {
+        when(productRepository.findById(99L)).thenReturn(Optional.empty());
+
+        Optional<Product> result = productService.findById(99L);
+
+        assertThat(result).isEmpty();
+    }
 }

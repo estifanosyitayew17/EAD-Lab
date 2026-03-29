@@ -1,1 +1,6 @@
 com/ctbe/estifanos/ProductServiceApplication.class
+com/ctbe/estifanos/model/Product.class
+com/ctbe/estifanos/service/ProductService.class
+com/ctbe/estifanos/controller/HealthController.class
+com/ctbe/estifanos/repository/ProductRepository.class
+com/ctbe/estifanos/controller/ProductController.class
