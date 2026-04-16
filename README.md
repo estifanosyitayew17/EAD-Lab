@@ -38,6 +38,7 @@ This lab demonstrates building a **production-style REST API** using the Spring 
 ---
 
 ## 📁 Project Structure
+```bash
 EAD-Lab/
 ├── 📄 README.md                    # Project documentation
 ├── 📁 .github/
