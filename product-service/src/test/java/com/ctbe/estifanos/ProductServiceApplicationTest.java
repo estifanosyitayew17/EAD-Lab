@@ -23,15 +23,12 @@ class ProductServiceTest {
 
     @Test
     void findByIdReturnsProductWhenProductExists() {
-        // Arrange
         Product laptop = new Product("Laptop", 1200.0);
         laptop.setId(1L);
         when(productRepository.findById(1L)).thenReturn(Optional.of(laptop));
 
-        // Act
         Optional<Product> result = productService.findById(1L);
 
-        // Assert
         assertThat(result).isPresent();
         assertThat(result.get().getName()).isEqualTo("Laptop");
         assertThat(result.get().getPrice()).isEqualTo(1200.0);
