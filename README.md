@@ -108,7 +108,7 @@ The application follows **layered architecture** with clear separation of concer
 │  • In-memory database                                        │
 │  • Auto-creates/drops tables                                 │
 └─────────────────────────────────────────────────────────────┘
-
+```
 ---
 
 ## 🚀 Getting Started
