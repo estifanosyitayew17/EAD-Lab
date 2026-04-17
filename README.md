@@ -1,3 +1,5 @@
+[![CI](https://github.com/estifanosiyatew17/EAD-Lab/actions/workflows/ci.yml/badge.svg)](https://github.com/estifanosiyatew17/EAD-Lab/actions/workflows/ci.yml)
+
 # 🚀 Enterprise Application Development - Lab 1
 
 [![Java](https://img.shields.io/badge/Java-17-blue.svg)](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
@@ -27,13 +29,13 @@ This lab demonstrates building a **production-style REST API** using the Spring 
 
 ### Learning Objectives Achieved ✅
 
-- [x] Generate Spring Boot project from Spring Initializr
-- [x] Implement layered enterprise architecture
-- [x] Build REST API with `@RestController`, `@GetMapping`, `@PostMapping`
-- [x] Map Java classes to database tables using Spring Data JPA
-- [x] Write clean Service layer with business logic
-- [x] Create unit tests with JUnit 5 and Mockito
-- [x] Configure GitHub Actions CI pipeline
+- Generate Spring Boot project from Spring Initializr
+- Implement layered enterprise architecture
+- Build REST API with `@RestController`, `@GetMapping`, `@PostMapping`
+- Map Java classes to database tables using Spring Data JPA
+- Write clean Service layer with business logic
+- Create unit tests with JUnit 5 and Mockito
+- Configure GitHub Actions CI pipeline
 
 ---
 
@@ -102,7 +104,7 @@ The application follows **layered architecture** with clear separation of concer
 │  • No business logic here                                    │
 └─────────────────────────────────────────────────────────────┘
                               │
-                              ▼
+                             ▼
 ┌─────────────────────────────────────────────────────────────┐
 │  DATABASE (H2)                                               │
 │  • In-memory database                                        │
@@ -136,3 +138,38 @@ mvn clean install
 
 # Run the application
 mvn spring-boot:run
+```
+---
+##  API Endpoints
+
+| Method | Endpoint | Description | Response Code |
+|--------|----------|-------------|---------------|
+| `GET` | `/products` | Retrieve all products | 200 OK |
+| `GET` | `/products/{id}` | Retrieve product by ID | 200 OK / 404 Not Found |
+| `POST` | `/products` | Create a new product | 201 Created |
+| `GET` | `/health` | Service health check | 200 OK |
+
+---
+
+## Example API Calls
+
+```bash
+# Health check
+curl http://localhost:8080/health
+
+# Get all products
+curl http://localhost:8080/products
+
+# Create a product
+curl -X POST http://localhost:8080/products \
+  -H "Content-Type: application/json" \
+  -d '{"name": "Mouse", "price": 49.99}'
+```
+---
+
+## H2 Database Console
+
+- **URL**: http://localhost:8080/h2-console
+- **JDBC URL**: `jdbc:h2:mem:productdb`
+- **Username**: `sa`
+- **Password**: (leave empty)
