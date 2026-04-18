@@ -1,4 +1,4 @@
-[![CI](https://github.com/estifanosiyatew17/EAD-Lab/actions/workflows/main.yml/badge.svg)](https://github.com/estifanosiyatew17/EAD-Lab/actions/workflows/main.yml)
+[![CI](https://github.com/estifanosiyatew17/EAD-Lab/actions/workflows/ci.yml/badge.svg)](https://github.com/estifanosiyatew17/EAD-Lab/actions/workflows/ci.yml)
 
 # 🚀 Enterprise Application Development - Lab 1
 
