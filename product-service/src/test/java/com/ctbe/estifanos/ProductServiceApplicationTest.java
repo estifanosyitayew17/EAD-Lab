@@ -1,5 +1,6 @@
 package com.ctbe.estifanos;
 
+import com.ctbe.estifanos.dto.ProductResponse;
 import com.ctbe.estifanos.model.Product;
 import com.ctbe.estifanos.repository.ProductRepository;
 import com.ctbe.estifanos.service.ProductService;
@@ -13,7 +14,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-class ProductServiceTest {
+class ProductServiceApplicationTest {
 
     @Mock
     private ProductRepository productRepository;
@@ -23,23 +24,26 @@ class ProductServiceTest {
 
     @Test
     void findByIdReturnsProductWhenProductExists() {
-        Product laptop = new Product("Laptop", 1200.0);
+        Product laptop = new Product("Laptop", 1200.0, 15, "Electronics");
         laptop.setId(1L);
         when(productRepository.findById(1L)).thenReturn(Optional.of(laptop));
 
-        Optional<Product> result = productService.findById(1L);
+        ProductResponse result = productService.findById(1L);
 
-        assertThat(result).isPresent();
-        assertThat(result.get().getName()).isEqualTo("Laptop");
-        assertThat(result.get().getPrice()).isEqualTo(1200.0);
+        assertThat(result).isNotNull();
+        assertThat(result.getName()).isEqualTo("Laptop");
+        assertThat(result.getPrice()).isEqualTo(1200.0);
+        assertThat(result.getStockQty()).isEqualTo(15);
+        assertThat(result.getCategory()).isEqualTo("Electronics");
     }
 
     @Test
-    void findByIdReturnsEmptyWhenProductNotFound() {
+    void findByIdThrowsExceptionWhenProductNotFound() {
         when(productRepository.findById(99L)).thenReturn(Optional.empty());
 
-        Optional<Product> result = productService.findById(99L);
-
-        assertThat(result).isEmpty();
+        org.junit.jupiter.api.Assertions.assertThrows(
+            com.ctbe.estifanos.exception.ResourceNotFoundException.class,
+            () -> productService.findById(99L)
+        );
     }
 }

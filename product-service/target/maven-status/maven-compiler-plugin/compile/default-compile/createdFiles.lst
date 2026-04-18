@@ -1,6 +1,9 @@
+com/ctbe/estifanos/exception/ResourceNotFoundException.class
 com/ctbe/estifanos/ProductServiceApplication.class
 com/ctbe/estifanos/model/Product.class
+com/ctbe/estifanos/dto/ProductRequest.class
 com/ctbe/estifanos/service/ProductService.class
+com/ctbe/estifanos/dto/ProductResponse.class
 com/ctbe/estifanos/controller/HealthController.class
 com/ctbe/estifanos/repository/ProductRepository.class
 com/ctbe/estifanos/controller/ProductController.class

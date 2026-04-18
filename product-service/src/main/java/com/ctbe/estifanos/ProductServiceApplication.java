@@ -9,17 +9,17 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class ProductServiceApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(ProductServiceApplication.class, args);
     }
-
+    
     @Bean
     CommandLineRunner seedData(ProductRepository repo) {
         return args -> {
-            repo.save(new Product("Laptop", 1200.00));
-            repo.save(new Product("Monitor", 350.00));
-            repo.save(new Product("Keyboard", 85.00));
+            repo.save(new Product("Laptop", 1200.00, 15, "Electronics"));
+            repo.save(new Product("Monitor", 350.00, 8, "Electronics"));
+            repo.save(new Product("Keyboard", 85.00, 30, "Peripherals"));
+            System.out.println("✅ Seeded 3 products into database!");
         };
     }
 }
