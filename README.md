@@ -5,7 +5,6 @@
 [![Java](https://img.shields.io/badge/Java-17-blue.svg)](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.0-brightgreen.svg)](https://spring.io/projects/spring-boot)
 [![Maven](https://img.shields.io/badge/Maven-3.8+-orange.svg)](https://maven.apache.org/)
-[![CI](https://github.com/estifanosiyatew17/EAD-Lab/actions/workflows/ci.yml/badge.svg)](https://github.com/estifanosiyatew17/EAD-Lab/actions/workflows/ci.yml)
 [![H2 Database](https://img.shields.io/badge/Database-H2-blue.svg)](https://www.h2database.com/)
 [![License](https://img.shields.io/badge/License-Educational-yellow.svg)](LICENSE)
 
