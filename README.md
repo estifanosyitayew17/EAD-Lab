@@ -1,6 +1,6 @@
-[![CI](https://github.com/estifanosiyatew17/EAD-Lab/actions/workflows/ci.yml/badge.svg)](https://github.com/estifanosiyatew17/EAD-Lab/actions/workflows/ci.yml)
+![CI](https://github.com/estifanosiyatew17/EAD-Lab/actions/workflows/ci.yml/badge.svg)
 
-# 🚀 Enterprise Application Development - Lab 1
+# 🚀 Enterprise Application Development - Lab 1 $ 2
 
 [![Java](https://img.shields.io/badge/Java-17-blue.svg)](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.0-brightgreen.svg)](https://spring.io/projects/spring-boot)
