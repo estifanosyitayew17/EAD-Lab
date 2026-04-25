@@ -1,6 +1,6 @@
 ![CI](https://github.com/estifanosyitayew17/EAD-Lab/actions/workflows/ci.yml/badge.svg)
 
-# 🚀 Enterprise Application Development - Lab 1 $ 2
+# 🚀 Enterprise Application Development - Lab 1 & 2
 
 [![Java](https://img.shields.io/badge/Java-17-blue.svg)](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.0-brightgreen.svg)](https://spring.io/projects/spring-boot)
@@ -172,3 +172,9 @@ curl -X POST http://localhost:8080/products \
 - **JDBC URL**: `jdbc:h2:mem:productdb`
 - **Username**: `sa`
 - **Password**: (leave empty)
+
+
+---
+
+## Swagger Screenshot
+![Swagger Screenshot](screen_shot/Swagger_Screenshot.jpg)
